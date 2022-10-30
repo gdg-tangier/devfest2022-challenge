@@ -1,0 +1,7 @@
+I supposed there is a bug in the challenge cuz i don't think it was meant to be broken with simply adding up the decimal
+value of the characters which should give in the end 3999.
+How I found the solution:
+I readed the binary with r2 while enabling aaaa, i checked the functions used with afl, after walking around the funcs I found a suspecious func called fcn.0000116d, i displayed the func with pdf @ and then found some weird comparaison of the value accumulated by adding each time the decimal value of the char in the string given by the user so in the end this challenge can be solved with any password where all the characters add up to make 3999.
+some solution that I tried :
+./vault '+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
+./vault '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~]'
